@@ -14,6 +14,15 @@
         todos.push(str);
         console.log(todos)
       }
+
+      let editTodo = (num, str) => {
+        if (todos[num]){
+          todos[num] = str;
+          console.log(todos);
+        } else {
+          console.log("That todo does not exit, please try again");
+        }
+      }
     </script>
   </body>
 </html>
