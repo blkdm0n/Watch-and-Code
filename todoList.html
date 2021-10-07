@@ -20,7 +20,16 @@
           todos[num] = str;
           console.log(todos);
         } else {
-          console.log("That todo does not exit, please try again");
+          console.log("That todo does not exist, please try again");
+        }
+      }
+
+      let removeTodo = (arr, num) => {
+        if (arr[num]) {
+          arr.splice(num, 1);
+          return arr;
+        } else {
+          console.log("That todo does not exist, please try again")
         }
       }
     </script>
