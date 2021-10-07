@@ -10,7 +10,7 @@
 
       console.log(todos)
 
-      let addTodo = (todo) => {
+      let add = (todo) => {
         if (todo.length > 0) {
           todos.push(todo);
           console.log(todos);
@@ -19,7 +19,7 @@
         }
       }
 
-      let editTodo = (index, todo) => {
+      let edit = (index, todo) => {
         if (todos[index] && todo.length > 0){
           todos[index] = todo;
           console.log(todos);
@@ -28,7 +28,7 @@
         }
       }
 
-      let removeTodo = (index) => {
+      let deleteTodo = (index) => {
         if (todos[index]) {
           todos.splice(index, 1);
           console.log(todos);
