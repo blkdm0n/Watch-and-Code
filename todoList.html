@@ -21,21 +21,30 @@
       console.log(todos)
 
       function add (todo) {
-          todos.push({
-            todoText: todo,
-            completed: false
-          });
-          console.log(todos);
+        todos.push({
+          todoText: todo,
+          completed: false
+         });
+        console.log(todos);
       }
 
       function edit(index, todo){
-          todos[index].todoText = todo;
-          console.log(todos);
+        todos[index].todoText = todo;
+        console.log(todos);
+      }
+      function toggleCompleted(index) {
+        currentStatus = todos[index].completed
+        if (currentStatus) {
+          todos[index].completed = false;
+        } else {
+          todos[index].completed = true;
+        }
+        console.log(todos)
       }
 
       function deleteTodo (index) {
-          todos.splice(index, 1);
-          console.log(todos);
+        todos.splice(index, 1);
+        console.log(todos);
       }
     </script>
   </body>
