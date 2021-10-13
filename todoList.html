@@ -4,37 +4,26 @@
     <title>Practical JavaScript</title>
   </head>
   
+  
   <body>
     <script>
       var todos = ["item1", "item2", "item3"];
 
       console.log(todos)
 
-      let add = (todo) => {
-        if (todo.length > 0) {
+      function add (todo) {
           todos.push(todo);
           console.log(todos);
-        } else {
-          console.log('This is not a real todo, Buddy!');
-        }
       }
 
-      let edit = (index, todo) => {
-        if (todos[index] && todo.length > 0){
+      function edit(index, todo){
           todos[index] = todo;
           console.log(todos);
-        } else {
-          console.log("That todo does not exist or you have not entered an updated todo, please try again");
-        }
       }
 
-      let deleteTodo = (index) => {
-        if (todos[index]) {
+      function deleteTodo (index) {
           todos.splice(index, 1);
           console.log(todos);
-        } else {
-          console.log("That todo does not exist, please try again")
-        }
       }
     </script>
   </body>
