@@ -32,12 +32,12 @@
         todos[index].todoText = newTodoText;
         console.log(todos);
       }
-      function toggleCompleted(index) {
+      function toggle(index) {
         currentStatus = todos[index].completed
-        if (currentStatus) {
-          todos[index].completed = false;
-        } else {
+        if (!currentStatus) {
           todos[index].completed = true;
+        } else {
+          todos[index].completed = false;
         }
         console.log(todos)
       }
