@@ -46,6 +46,12 @@
         todos.splice(index, 1);
         console.log(todos);
       }
+
+      function displayTodos (todos) {
+        todos.each(todo => {
+          console.log(todo)
+        })
+      }
     </script>
   </body>
 </html>
