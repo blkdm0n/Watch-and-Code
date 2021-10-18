@@ -1,5 +1,5 @@
 Version 5
-[] It should have a function for displaying todos
+[X] It should have a function for displaying todos
 [] The display todos function should show the todoText property only
 
 Version 4
