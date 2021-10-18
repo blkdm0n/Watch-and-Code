@@ -18,19 +18,19 @@
          completed: false
         }];
 
-      console.log(todos)
+      displayTodos()
 
       function add (initialTodoText) {
         todos.push({
           todoText: initialTodoText,
           completed: false
          });
-        console.log(todos);
+         displayTodos();
       }
 
       function edit(index, newTodoText){
         todos[index].todoText = newTodoText;
-        console.log(todos);
+        displayTodos();
       }
       function toggle(index) {
         currentStatus = todos[index].completed
@@ -39,17 +39,21 @@
         } else {
           todos[index].completed = false;
         }
-        console.log(todos)
+        displayTodos();
       }
 
       function deleteTodo (index) {
         todos.splice(index, 1);
-        console.log(todos);
+        displayTodos();
       }
 
-      function displayTodos (todos) {
-        todos.each(todo => {
-          console.log(todo.todoText)
+      function displayTodos () {
+        todos.forEach(todo => {
+          if (todo.completed) {
+            console.log(`[x] ${todo.todoText}`)
+          } else {
+            console.log(`[ ] ${todo.todoText}`)
+          }
         })
       }
     </script>
