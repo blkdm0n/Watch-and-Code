@@ -1,3 +1,9 @@
+Version 6
+[] It should have a function for toggling all todos
+[] If everything is false, change completed property of all todo to true
+[] If everything is true, change completed property of all todos to false
+[] If mixed change everything to true
+
 Version 5
 [X] It should have a function for displaying todos
 [X] The display todos function should show the todoText property only
