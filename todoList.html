@@ -56,6 +56,19 @@
           }
         })
       }
+
+      function toggleAll () {
+        var isCompleted = todos.every(todo => todo.completed === true)
+
+        todos.forEach(todo => {
+          if (isCompleted) {
+            todo.completed = false
+          } else {
+            todo.completed  = true
+          }
+        })
+        displayTodos()
+      }
     </script>
   </body>
 </html>
