@@ -1,3 +1,7 @@
+Version 7
+[] It should have a button for displaying todos
+[] The displayTodos button should run the displayTodos function
+
 Version 6
 [X] It should have a function for toggling all todos
 [X] If everything is false, change completed property of all todo to true
