@@ -6,6 +6,7 @@
   
   
   <body>
+    <button id="display-todos-button">displayTodos</button>
     <script>
       var todos = [
         {todoText:'item1',
@@ -69,7 +70,9 @@
         })
         displayTodos()
       }
+      var displayTodosButton = document.getElementById("display-todos-button")
+      displayTodosButton.addEventListener('click', displayTodos)
     </script>
-    <button id="display-todos-button" onclick="displayTodos()">displayTodos</button>
+    
   </body>
 </html>
