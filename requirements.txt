@@ -1,6 +1,8 @@
 Version 7
 [X] It should have a button for displaying todos
 [X] The displayTodos button should run the displayTodos function
+[] It should have a button for toggleAll
+[] The toggleAll button should run the toggleAll function
 
 Version 6
 [X] It should have a function for toggling all todos
