@@ -14,8 +14,11 @@
     <button id="add-todo-button">add todo</button>
     <br><br>
     <input type="text" id="edited-todo-text" placeholder="edited todo text"></input>
-    <input type="number" id="todo-index" placeholder="index of todo"></input>
+    <input type="number" id="todo-index" placeholder="index of todo to be edited"></input>
     <button id="edit-todo-button">edit todo</button>
+    <br><br>
+    <input type="number" id="deleted-todo-index" placeholder="index of todo to be deleted"></input>
+    <button id="delete-todo-button">delete todo</button>
     <script>
       var todos = [
         {todoText:'item1',
@@ -100,6 +103,14 @@
         document.getElementById('edited-todo-text').value = ''
         document.getElementById('todo-index').value = ''
       })
+
+      var deleteTodoButton = document.getElementById('delete-todo-button')
+      deleteTodoButton.addEventListener('click', ()=> {
+        var index = document.getElementById('deleted-todo-index').value
+        deleteTodo(index)
+        document.getElementById('deleted-todo-index').value = ''
+      })
+      
 
       
 
