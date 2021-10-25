@@ -92,6 +92,15 @@
         document.getElementById('initial-todo-text').value = ''
       })
 
+      var editTodoButton = document.getElementById("edit-todo-button")
+      editTodoButton.addEventListener('click', () => {
+        var newTodoText = document.getElementById('edited-todo-text').value
+        var index = document.getElementById('todo-index').value
+        edit(index, newTodoText)
+        document.getElementById('edited-todo-text').value = ''
+        document.getElementById('todo-index').value = ''
+      })
+
       
 
       
