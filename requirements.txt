@@ -2,7 +2,7 @@ Version 8
 [X] It should have a working button for adding a todo 
 [X] It should have a working button for editing a todo
 [X] It should have a working button for deleting a todo
-[] It should have a working button for toggling a todo
+[X] It should have a working button for toggling a todo
 
 Version 7
 [X] It should have a button for displaying todos

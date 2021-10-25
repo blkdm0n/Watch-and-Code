@@ -17,8 +17,13 @@
     <input type="number" id="todo-index" placeholder="index of todo to be edited"></input>
     <button id="edit-todo-button">edit todo</button>
     <br><br>
-    <input type="number" id="deleted-todo-index" placeholder="index of todo to be deleted"></input>
+    <input type="number" min="0" id="deleted-todo-index" placeholder="index of todo to be deleted"></input>
     <button id="delete-todo-button">delete todo</button>
+    <br><br>
+    <input type="number" min="0" id="toggle-todo" placeholder="index of todo to be toggled">
+      <button id="toggle-button">toggle todo</button>
+    </input>
+    
     <script>
       var todos = [
         {todoText:'item1',
@@ -46,7 +51,7 @@
         displayTodos();
       }
       function toggle(index) {
-        currentStatus = todos[index].completed
+        var currentStatus = todos[index].completed
         if (!currentStatus) {
           todos[index].completed = true;
         } else {
@@ -110,12 +115,13 @@
         deleteTodo(index)
         document.getElementById('deleted-todo-index').value = ''
       })
-      
 
-      
-
-      
-      
+      var toggleButton = document.getElementById('toggle-button')
+      toggleButton.addEventListener('click', function () {
+        var index = Number(document.getElementById('toggle-todo').value)
+        toggle(index)
+        document.getElementById('toggle-todo').value = ''
+      })     
     </script>
     
   </body>
