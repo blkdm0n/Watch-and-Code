@@ -38,7 +38,7 @@
 
       displayTodos()
 
-      function add (initialTodoText) {
+      function add () {
         var initialTodoText = document.getElementById("initial-todo-text").value
         todos.push({
           todoText: initialTodoText,
@@ -48,22 +48,30 @@
          displayTodos();
       }
 
-      function edit(index, newTodoText){
+      function edit(){
+        var newTodoText = document.getElementById('edited-todo-text').value
+        var index = document.getElementById('todo-index').value
         todos[index].todoText = newTodoText;
+        document.getElementById('edited-todo-text').value = ""
+        document.getElementById('todo-index').value = ""
         displayTodos();
       }
-      function toggle(index) {
+      function toggle() {
+        var index = Number(document.getElementById('toggle-todo').value)
         var currentStatus = todos[index].completed
         if (!currentStatus) {
           todos[index].completed = true;
         } else {
           todos[index].completed = false;
         }
+        document.getElementById('toggle-todo').value = ""
         displayTodos();
       }
 
-      function deleteTodo (index) {
+      function deleteTodo () {
+        var index = document.getElementById('deleted-todo-index').value
         todos.splice(index, 1);
+        document.getElementById('deleted-todo-index').value = ""
         displayTodos();
       }
 
@@ -89,37 +97,17 @@
         })
         displayTodos()
       }
-      var displayTodosButton = document.getElementById("display-todos-button")
-      displayTodosButton.addEventListener('click', displayTodos)
+      var displayTodosButton = document.getElementById("display-todos-button").addEventListener('click', displayTodos)
 
-      var toggleAllButton = document.getElementById("toggle-all-button")
-      toggleAllButton.addEventListener('click', toggleAll)
+      var toggleAllButton = document.getElementById("toggle-all-button").addEventListener('click', toggleAll)
       
-      var addTodoButton = document.getElementById("add-todo-button")
-      addTodoButton.addEventListener('click', add)
+      var addTodoButton = document.getElementById("add-todo-button").addEventListener('click', add)
 
-      var editTodoButton = document.getElementById("edit-todo-button")
-      editTodoButton.addEventListener('click', () => {
-        var newTodoText = document.getElementById('edited-todo-text').value
-        var index = document.getElementById('todo-index').value
-        edit(index, newTodoText)
-        document.getElementById('edited-todo-text').value = ''
-        document.getElementById('todo-index').value = ''
-      })
+      var editTodoButton = document.getElementById("edit-todo-button").addEventListener('click', edit )
 
-      var deleteTodoButton = document.getElementById('delete-todo-button')
-      deleteTodoButton.addEventListener('click', ()=> {
-        var index = document.getElementById('deleted-todo-index').value
-        deleteTodo(index)
-        document.getElementById('deleted-todo-index').value = ''
-      })
+      var deleteTodoButton = document.getElementById('delete-todo-button').addEventListener('click', deleteTodo)
 
-      var toggleButton = document.getElementById('toggle-button')
-      toggleButton.addEventListener('click', function () {
-        var index = Number(document.getElementById('toggle-todo').value)
-        toggle(index)
-        document.getElementById('toggle-todo').value = ''
-      })     
+      var toggleButton = document.getElementById('toggle-button').addEventListener('click', toggle)     
     </script>
     
   </body>
