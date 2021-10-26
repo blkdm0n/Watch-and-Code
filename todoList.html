@@ -39,10 +39,12 @@
       displayTodos()
 
       function add (initialTodoText) {
+        var initialTodoText = document.getElementById("initial-todo-text").value
         todos.push({
           todoText: initialTodoText,
           completed: false
          });
+         document.getElementById("initial-todo-text").value = ""
          displayTodos();
       }
 
@@ -94,11 +96,7 @@
       toggleAllButton.addEventListener('click', toggleAll)
       
       var addTodoButton = document.getElementById("add-todo-button")
-      addTodoButton.addEventListener('click', () => {
-        var todoText = document.getElementById("initial-todo-text")
-        add(todoText.value)
-        document.getElementById('initial-todo-text').value = ''
-      })
+      addTodoButton.addEventListener('click', add)
 
       var editTodoButton = document.getElementById("edit-todo-button")
       editTodoButton.addEventListener('click', () => {
